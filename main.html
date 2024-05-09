@@ -7,31 +7,32 @@
     <style>
       #container {
         margin: 20px;
-        position: relative;
+        position: absolute;
+        left: 150px;
       }
 
-      #container::before,
-      #container::after {
-        content: "Special Text";
+      #container::before {
+        top: 12px;
+        left: -130px;
+        content: "Before Element";
         color: #f00;
         font-size: 20px;
         position: absolute;
       }
 
-      #container::before {
-        top: 0;
-        left: -120px;
-      }
-
       #container::after {
-        bottom: 0;
-        right: -120px;
+        top: 12px;
+        left: 230px;
+        content: "After Element";
+        color: #f00;
+        font-size: 20px;
+        position: absolute;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <p>Main Content Goes Here</p>
+      <p>This is the main container element</p>
     </div>
   </body>
 </html>
