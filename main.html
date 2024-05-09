@@ -3,23 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Special Text Layout</title>
     <style>
       #container {
         margin: 20px;
+        position: relative;
       }
-      #container p span {
+
+      #container::before,
+      #container::after {
+        content: "Special Text";
         color: #f00;
         font-size: 20px;
+        position: absolute;
+      }
+
+      #container::before {
+        top: 0;
+        left: -120px;
+      }
+
+      #container::after {
+        bottom: 0;
+        right: -120px;
       }
     </style>
   </head>
   <body>
     <div id="container">
-      <p>
-        <span>Before Element</span> This is the main conatiner element
-        <span>After Element</span>
-      </p>
+      <p>Main Content Goes Here</p>
     </div>
   </body>
 </html>
